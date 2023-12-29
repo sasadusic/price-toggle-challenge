@@ -1,0 +1,190 @@
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  }
+  /*
+  2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+  5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+  6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+  7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+  8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+:root{
+  /* Primary */
+  --Linear-Gradient: linear-gradient(hsl(236, 72%, 79%),  hsl(237, 63%, 64%));
+
+  /* Neutral */
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+  --Grayish-Blue-footer: hsl(233, 13%, 35%);
+    }
+  .attribution { 
+    font-size: 16px; 
+    text-align: center;
+    padding: 24px;
+    background: var(--Grayish-Blue-footer);
+    color: white;
+   }
+  .attribution a { 
+    color: hsl(228, 45%, 44%);
+   }
+p{
+  font-size: 15px;
+  color: var(--Dark-Grayish-Blue);
+}
+.heading{
+  font-size: 24px;
+  color: var(--Dark-Grayish-Blue);
+}
+.choose{
+  color: var(--Light-Grayish-Blue);
+  font-size: 15px;
+}
+.sub-header{
+  font-size: 16px;
+}
+.main{
+  background-color: var(--Very-Light-Grayish-Blue);
+  min-height: calc(100vh - 64px);
+  padding: 60px 240px;
+}
+.header{
+  text-align: center;
+}
+.toggle-cont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px;
+  gap: 18px;
+}
+.toggle{
+  border: none;
+  outline-color: transparent;
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(90deg, #a3a8f0,  #696fdd);
+  border-radius: 50px;
+  position: relative;
+}
+.toggle::before{
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--Very-Light-Grayish-Blue);
+  top: 3px;
+  left: 3px;
+  border-radius: 50%;
+}
+.toggle.toggle-monthly::before{
+  left: 32px;
+}
+.card-cont{
+  display: flex;
+  align-items: center;
+  flex:1;
+}
+.card{
+  flex: 1;
+  background-color: white;
+  box-shadow: 0 0 10px 5px  hsla(234, 14%, 74%, .2);
+  text-align: center;
+  padding: 24px;
+  height: min-content;
+}
+.card-2{
+  background: linear-gradient(#a3a8f0,  #696fdd);
+  color: var(--Very-Light-Grayish-Blue) !important;
+  padding: 40px 18px;
+  border-radius: 6px;
+}
+.card-1{
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+.card-3{
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.card-2 .phar{
+  color: var(--Very-Light-Grayish-Blue) !important;
+}
+.btn{
+  border: none;
+  outline-color: transparent;
+  text-transform: uppercase;
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #a3a8f0,  #696fdd);
+  color: var(--Very-Light-Grayish-Blue);
+}
+.card-2 .btn{
+  background: var(--Very-Light-Grayish-Blue);
+  color: var(--Dark-Grayish-Blue);
+}
+.phar{
+  padding: 12px;
+  border-top: 1px solid var(--Light-Grayish-Blue);
+}
+.price{
+  font-size: 50px;
+  margin: 24px;
+}
+.active{
+  display: none;
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (width < 1200px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (width < 992px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (width < 768px) {}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (width < 576px) {}
